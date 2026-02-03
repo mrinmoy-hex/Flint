@@ -79,7 +79,9 @@ class Environment:
         
         # Check if the variable already exists and raise an error
         if key in self.values:
-            raise CustomRunTimeError(name, f"Variable '{key}' already defined in the current scope.")
+            # No idea why I wrote this line :(
+            # raise CustomRunTimeError(name, f"Variable '{key}' already defined in the current scope.")
+            pass
     
         self.values[key] = value
         # print(f"Defined {key} in the environment with value {value}")
